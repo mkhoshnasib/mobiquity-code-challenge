@@ -1,1 +1,1 @@
-test.skip('http interceptor tests', () => {});
+it.skip('http interceptor tests', () => {});
