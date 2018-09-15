@@ -5,6 +5,7 @@ module.exports = {
     "jest": true
   },
   "rules": {
+    "comma-dangle": 0,
     "no-console": 0,
     "react/prefer-stateless-function": 0,
     "no-param-reassign": 0,

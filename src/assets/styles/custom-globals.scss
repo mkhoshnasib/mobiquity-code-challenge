@@ -1,0 +1,17 @@
+@import './custom-css-bootstrap';
+
+//------------------ Overriding default card styles ------------------//
+.card-header {
+  @extend .bg-white;
+  border: none;
+}
+
+.card {
+  border: none;
+  box-shadow: 0 0 20px 5px rgba(0,0,0,0.06);
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 4px 8px 20px 5px rgba(0, 0, 0, 0.06);
+}
