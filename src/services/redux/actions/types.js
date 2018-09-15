@@ -1,0 +1,1 @@
+export const FETCH_CHAMPIONS = 'FETCH_CHAMPIONS';

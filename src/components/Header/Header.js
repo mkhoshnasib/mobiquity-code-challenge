@@ -5,7 +5,7 @@ import f1 from '../../assets/imgs/f1.png';
 class Header extends Component {
   render() {
     return (
-      <div className="bg-primary text-center py-lg-5 py-3">
+      <div className="bg-dark text-center py-lg-5 py-3">
         <h1 className="text-white">
           Welcome To
           <img src={f1} alt="f1-logo" className="img-f1-logo mx-2" />
