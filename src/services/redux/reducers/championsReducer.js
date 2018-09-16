@@ -4,7 +4,7 @@ const initialState = {
   items: [],
 };
 
-export default function (state = initialState, action) {
+export default function championsReducer(state = initialState, action) {
   switch (action.type) {
     case FETCH_CHAMPIONS: return {
       ...state,

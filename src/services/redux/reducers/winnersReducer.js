@@ -4,7 +4,7 @@ const initialState = {
   items: [],
 };
 
-export default function (state = initialState, action) {
+export default function winnersReducer(state = initialState, action) {
   switch (action.type) {
     case FETCH_WINNERS: return {
       ...state,

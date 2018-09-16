@@ -13,8 +13,9 @@ const collectData = (response, worldChampionId) => ({
 });
 
 /** fetches season winners of every race */
-const fetchRaceResult = (season, worldChampionId) => httpClient.getCall(`/${season}/results/1.json`)
-  .then(res => res.data.MRData.RaceTable.Races.map(x => collectData(x, worldChampionId)));
+export const fetchRaceResult = (season, worldChampionId) => httpClient.getCall(`/${season}/results/1.json`)
+  .then(res => res.data.MRData.RaceTable.Races.map(x => collectData(x, worldChampionId)))
+  .catch(error => console.error(`An error occurred on fetching winners every race in season '${season}'`, error.status));
 
 
 /** dispatches fetched winners to reducer */

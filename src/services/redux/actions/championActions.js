@@ -11,8 +11,9 @@ const collectData = response => ({
 });
 
 /** fetches a season champion */
-const fetchChampion = season => httpClient.getCall(`/${season}/driverStandings/1.json`)
-  .then(res => collectData(res.data.MRData.StandingsTable));
+export const fetchChampion = season => httpClient.getCall(`/${season}/driverStandings/1.json`)
+  .then(res => collectData(res.data.MRData.StandingsTable))
+  .catch(error => console.error(`An error occurred on fetching world champion of season '${season}'`, error.status));
 
 /** dispatches fetched champions to reducer */
 export const fetchChampions = seasons => (dispatch) => {
