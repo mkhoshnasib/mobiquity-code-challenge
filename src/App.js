@@ -6,6 +6,7 @@ import Header from './components/Header/Header';
 import WorldChampionsList from './components/WorldChampionsList/WorldChampionsList';
 import SeasonWinners from './components/SeasonWinnersList/SeasonWinnersList';
 
+/** clean code is it's own documentation */
 class App extends Component {
   render() {
     return (
