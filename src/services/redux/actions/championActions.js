@@ -16,10 +16,8 @@ const fetchChampion = season => httpClient.getCall(`/${season}/driverStandings/1
 
 /** dispatches fetched champions to reducer */
 export const fetchChampions = seasons => (dispatch) => {
-  seasons.forEach(x => fetchChampion(x).then((res) => {
-    dispatch({
-      type: FETCH_CHAMPIONS,
-      payload: res,
-    });
-  }));
+  seasons.forEach(x => fetchChampion(x).then(res => dispatch({
+    type: FETCH_CHAMPIONS,
+    payload: res,
+  })));
 };

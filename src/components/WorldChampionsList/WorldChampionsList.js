@@ -6,10 +6,6 @@ import { fetchChampions } from '../../services/redux/actions/championActions';
 import WorldChampionCard from '../WorldChampionCard/WorldChampionCard';
 
 class WorldChampionsList extends Component {
-  static sortBySeason(array) {
-    array.sort((a, b) => a.season - b.season);
-  }
-
   constructor(props) {
     super(props);
     this.state = {
@@ -25,18 +21,12 @@ class WorldChampionsList extends Component {
     this.props.fetchChampions(this.state.seasons);
   }
 
-  checkAllChampionsFetched(champions) {
-    return champions.lenght === this.state.seasons;
-  }
-
   render() {
     const { champions } = this.props;
     return (
       <div className="row mx-2 mt-3">
-        {this.checkAllChampionsFetched(champions)
-          ? WorldChampionsList.sortBySeason(champions)
-            .map((x, index) => (<WorldChampionCard champion={x} key={index} />))
-          : null}
+        {champions.sort((a, b) => a.season - b.season)
+          .map((x, index) => (<WorldChampionCard champion={x} key={index} />))}
       </div>
     );
   }
