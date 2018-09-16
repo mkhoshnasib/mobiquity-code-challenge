@@ -11,6 +11,7 @@ First of all run `npm install` in order to download the dependencies.
   - [npm start](#npm-start)
   - [npm test](#npm-test)
   - [npm run build](#npm-run-build)
+- [Development Stack](#development-stack)
 
 ## Available Scripts
 
@@ -36,7 +37,7 @@ It correctly bundles React in production mode and optimizes the build for the be
 The build is minified and the filenames include the hashes.<br>
 Your app is ready to be deployed!
 
-### Stack
+### Development Stack
 
 Here is the stack I used for this project:
    - [React](https://reactjs.org/)
